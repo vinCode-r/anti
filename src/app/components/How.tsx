@@ -9,14 +9,14 @@ const How = () => {
   };
 
   return (
-    <div className="min-h-[80vh] w-full max-w-[88rem] py-48">
-      <h1 className="text-white md:text-5xl text-4xl font-bold text-center mb-2">
+    <div className="min-h-[72vh] w-full max-w-[88rem] py-32 z-[10]">
+      <h1 className="text-white md:text-5xl text-4xl font-bold text-center mb-4">
         About{" "}
         <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">
           Prototype
         </span>
       </h1>
-      <div className="w-full flex justify-center my-4">
+      <div className="w-full flex justify-center my-8">
         <button className="flex items-center justify-center p-1 rounded-full bg-black/50 backdrop-blur ml-3 gap-1">
           <span
             className={`text-md flex justify-center items-center bg-white rounded-full duration-200 p-3 font-medium ${

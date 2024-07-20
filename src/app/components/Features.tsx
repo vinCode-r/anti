@@ -1,16 +1,50 @@
 "use client";
 import React, { useState } from "react";
 
+type FeatureKey = keyof (typeof TEXT)[number];
+type Feature = {
+  [K in FeatureKey]: string;
+};
 const Features = () => {
   const [selected, setSelected] = useState("Automatic_Trash_Collection");
+
+  const TEXT: Feature[] = [
+    {
+      Automatic_Trash_Collection:
+        "ANTI robot to collect trash independently, operate without human assistance, and maintain efficiency in any environment.",
+    },
+    {
+      Smart_Trash_Identification:
+        "ANTI can differentiate between various types of waste. By using YOLO technology, ANTI robots can detect and identify various types of waste.",
+    },
+    {
+      AutoOpen:
+        "ANTI can open the trash can when there is rubbish detected nearby or when the system detects a human wanting to throw rubbish into it.",
+    },
+    {
+      AutoBack:
+        "ANTI can return to its original position if the battery level reaches 5% or less",
+    },
+    {
+      Hello_ANTI:
+        "A feature that facilitates communication between humans and the system, allowing users to interact with or give instructions to the ANTI robot.",
+    },
+    {
+      Smart_Link:
+        "A feature that enables users to track the robot's performance in real-time and view data collected by the ANTI robot.",
+    },
+  ] as const;
 
   const handleClick = (title: string) => {
     setSelected(title);
   };
 
   return (
-    <div className="min-h-[80vh] w-full max-w-[88rem] py-8">
-      <h1 className="text-white/80 md:text-5xl text-4xl font-bold text-center mb-4">
+    <div
+      className="min-h-[60vh] w-full max-w-[88rem] py-32 z-[10]"
+      id="features"
+    >
+      <h1 className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text md:text-5xl text-4xl font-bold text-center mb-12">
         Features
       </h1>
 
@@ -50,7 +84,7 @@ const Features = () => {
         </button>
 
         <button
-          className={`border-b xl:text-[1rem] text-ms text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
+          className={`border-b xl:text-[1rem] md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
             selected === "AutoOpen"
               ? "text-white border-white"
               : "text-white/50 border-white/50"
@@ -60,7 +94,7 @@ const Features = () => {
           Auto-Open
         </button>
         <button
-          className={`border-b xl:text-[1rem] text-ms text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
+          className={`border-b xl:text-[1rem] md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
             selected === "AutoBack"
               ? "text-white border-white"
               : "text-white/50 border-white/50"
@@ -70,17 +104,17 @@ const Features = () => {
           Auto-Back
         </button>
         <button
-          className={`border-b xl:text-[1rem] text-ms text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
-            selected === "Hello-ANTI"
+          className={`border-b xl:text-[1rem] md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
+            selected === "Hello_ANTI"
               ? "text-white border-white"
               : "text-white/50 border-white/50"
           }`}
-          onClick={() => handleClick("Hello-ANTI")}
+          onClick={() => handleClick("Hello_ANTI")}
         >
           Hello-ANTI
         </button>
         <button
-          className={`border-b xl:text-[1rem] text-ms text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
+          className={`border-b xl:text-[1rem] md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all ${
             selected === "Smart_Link"
               ? "text-white border-white"
               : "text-white/50 border-white/50"
@@ -90,7 +124,7 @@ const Features = () => {
           Smart-Link
         </button>
         <button
-          className={`border-b xl:text-[1rem] text-ms text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all lg:block hidden ${
+          className={`border-b xl:text-[1rem] md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] px-3 transition-all lg:block hidden ${
             selected === "Smart_Trash_Identification"
               ? "text-white border-white"
               : "text-white/50 border-white/50"
@@ -100,6 +134,11 @@ const Features = () => {
           Smart Trash Identification
         </button>
       </div>
+
+      <p className="text-white/65 md:text-2xl text-lg text-center max-w-[780px] mx-auto md:mt-20 mt-12 px-12">
+        {TEXT.find((item) => Object.keys(item)[0] === selected)?.[selected] ||
+          ""}
+      </p>
     </div>
   );
 };

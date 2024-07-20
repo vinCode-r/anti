@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #0c0c0c 0%, #33ced5 100%);
+  filter: blur(500px);
+}
+
 .background {
   background: linear-gradient(
     90deg,
