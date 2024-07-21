@@ -1,17 +1,30 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Design() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
-    <section id="design" className="w-full min-h-[80vh] z-[10]">
+    <section
+      id="design"
+      className="w-full min-h-[80vh] z-[100]"
+      data-aos="fade-up"
+    >
       <h1 className="text-center text-white/85 md:text-5xl text-4xl font-bold">
         ANTI{" "}
         <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">
           Design
         </span>
       </h1>
-      <div className="lg:h-[140] md:h-[120vh] h-[160vh] w-full">
+      <div className="lg:h-[140] md:h-[100vh] h-[160vh] w-full">
         <LayoutGrid cards={cards} />
       </div>
     </section>
@@ -75,7 +88,7 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "md:col-span-2",
-    thumbnail: "/overall.jpg",
+    thumbnail: "/fullbody.jpg",
   },
   {
     id: 2,
@@ -87,7 +100,7 @@ const cards = [
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail: "/kepala.jpg",
+    thumbnail: "/body.jpg",
   },
   {
     id: 4,

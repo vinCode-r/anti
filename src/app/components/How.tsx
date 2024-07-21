@@ -1,7 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const How = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   const [selected, setSelected] = useState("Goals");
 
   const handleClick = (title: string) => {
@@ -9,7 +18,10 @@ const How = () => {
   };
 
   return (
-    <div className="min-h-[72vh] w-full max-w-[88rem] py-32 z-[10]">
+    <div
+      className="min-h-[72vh] w-full max-w-[88rem] py-32 z-[100]"
+      data-aos="fade-up"
+    >
       <h1 className="text-white md:text-5xl text-4xl font-bold text-center mb-4">
         About{" "}
         <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">

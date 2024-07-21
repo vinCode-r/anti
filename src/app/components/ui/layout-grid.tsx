@@ -35,7 +35,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               "relative overflow-hidden hover:scale-[1.025] duration-300",
               selected?.id === card.id
-                ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? "rounded-lg cursor-pointer absolute inset-0 md:h-1/2 h-1/3 w-[90%] md:w-1/2 z-50 m-auto flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id
                 ? "z-40 bg-white rounded-xl h-full w-full"
                 : "bg-white rounded-xl h-full w-full"
@@ -62,14 +62,11 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 const BlurImage = ({ card }: { card: Card }) => {
   const [loaded, setLoaded] = useState(false);
   return (
-    <Image
+    <img
       src={card.thumbnail}
-      height="600"
-      width="600"
-      onLoad={() => setLoaded(true)}
+      loading="lazy"
       className={cn(
-        "object-cover object-center absolute inset-0 h-full w-full transition duration-200",
-        loaded ? "blur-none" : "blur-md"
+        "object-cover object-center absolute inset-0 h-full w-full transition duration-200"
       )}
       alt="thumbnail"
     />

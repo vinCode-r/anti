@@ -6,15 +6,8 @@ import React, { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
-function Model(props: any) {
+function Model(props) {
   const { nodes, materials } = useGLTF("/scene.glb");
-
-  useEffect(() => {
-    // Adjust the blue color
-    if (materials["Eye blue.001"]) {
-      materials["Eye blue.001"].color = new THREE.Color("#0000CC"); // Vibrant blue color
-    }
-  }, [materials]);
 
   return (
     <group {...props} dispose={null}>

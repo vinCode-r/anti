@@ -45,3 +45,150 @@ canvas {
     #000000
   );
 }
+
+.title {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9) 45%,
+    #33ced5 50%,
+    #18c48e 54%,
+    rgba(255, 255, 255, 0.9) 55%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateText 3s linear infinite;
+}
+
+.subtitle {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.7) 45%,
+    #fff 50%,
+    rgba(255, 255, 255, 0.7) 55%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateSubtitle 3s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 0.12px white;
+  text-stroke: 0.12px white;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #36ec9b,
+    #4deecf,
+    #30da94,
+    #4deecf,
+    #62e3ae
+  );
+  border-radius: inherit;
+  animation: rotation 2s linear infinite;
+}
+
+.hero::after {
+  filter: blur(3.5rem);
+}
+
+.gradient-border {
+  position: relative;
+  overflow: hidden;
+}
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  background: conic-gradient(transparent, transparent, transparent, #00ffbc);
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  background: conic-gradient(transparent, transparent, transparent, #4deeea);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animateText {
+  0% {
+    background-position: -700px;
+  }
+  100% {
+    background-position: 400px;
+  }
+}
+
+@keyframes animateSubtitle {
+  0% {
+    background-position: -400px;
+  }
+  100% {
+    background-position: 250px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+  border: 1px solid #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}

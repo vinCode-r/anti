@@ -15,15 +15,16 @@ const ModelView: React.FC = () => {
   const modelRef = useRef<THREE.Group>(null);
   const requestRef = useRef<number>();
   const [isPaused, setIsPaused] = useState(false);
-
-  const animate = () => {
-    if (modelRef.current && !isPaused) {
-      modelRef.current.rotation.y += 0.005;
-    }
-    requestRef.current = requestAnimationFrame(animate);
-  };
+  const [scale, setScale] = useState([0.6, 0.6, 0.6]);
 
   useEffect(() => {
+    const animate = () => {
+      if (modelRef.current && !isPaused) {
+        modelRef.current.rotation.y += 0.005;
+      }
+      requestRef.current = requestAnimationFrame(animate);
+    };
+
     requestRef.current = requestAnimationFrame(animate);
     return () => {
       if (requestRef.current) {
@@ -31,6 +32,22 @@ const ModelView: React.FC = () => {
       }
     };
   }, [isPaused]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setScale([0.5, 0.5, 0.5]);
+      } else {
+        setScale([0.6, 0.6, 0.6]);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleUserInteraction = () => {
     setIsPaused(true);
@@ -51,9 +68,9 @@ const ModelView: React.FC = () => {
         onStart={handleUserInteraction}
         onEnd={handleUserInteraction}
       />
-      <group position={[0, -0.8, 0]} ref={modelRef}>
+      <group position={[0, -0.6, 0]} ref={modelRef}>
         <Suspense fallback={<Loader />}>
-          <Anti scale={[0.7, 0.7, 0.7]} />
+          <Anti scale={scale} />
         </Suspense>
       </group>
     </View>
