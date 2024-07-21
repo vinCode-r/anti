@@ -66,13 +66,14 @@ const How = () => {
           </p>
         ) : (
           <p className="text-center text-white/75 md:text-lg text-sm leading-[24px] my-8">
-            The ANTI robot collects trash by making sounds and using body
-            movements to get people's attention. This helps people notice and
-            pick up trash. It works well in places like parks. ANTI also teaches
-            people about keeping the environment clean through its fun
-            interactions. By picking up trash and making people more aware, ANTI
-            helps create a cleaner and healthier world, improving everyone's
-            health and quality of life.
+            The ANTI robot helps keep places clean by collecting trash. It makes
+            sounds and moves to get people's attention, encouraging them to pick
+            up litter. ANTI works well in parks and other public areas. It also
+            teaches people about the importance of keeping the environment clean
+            through fun interactions. By reducing litter and raising awareness,
+            ANTI helps create a cleaner and healthier world, improving
+            everyone's health and quality of life. It makes public spaces more
+            enjoyable for everyone.
           </p>
         )}
       </div>

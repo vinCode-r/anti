@@ -30,9 +30,11 @@ export default function Design() {
 const SkeletonOne = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-primary">Designed Perfectly</p>
+      <p className="font-bold md:text-4xl sm:text-3xl text-2xl text-primary">
+        Designed Perfectly
+      </p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal md:text-lg sm:text-md text-sm my-2 max-w-lg text-neutral-200">
         ANTI is perfectly designed to have a cute and unique appearance for
         interacting with humans
       </p>
@@ -43,9 +45,11 @@ const SkeletonOne = () => {
 const SkeletonTwo = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-primary">Flexible Arms</p>
+      <p className="font-bold md:text-4xl sm:text-3xl text-2xl text-primary">
+        Flexible Arms
+      </p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal md:text-lg sm:text-md text-sm my-2 max-w-lg text-neutral-200">
         The arms on ANTI is designed to be able to pick up various types of
         waste
       </p>
@@ -55,11 +59,11 @@ const SkeletonTwo = () => {
 const SkeletonThree = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-primary">
+      <p className="font-bold md:text-4xl sm:text-3xl text-2xl text-primary">
         Cute and Adorable Design
       </p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal md:text-lg sm:text-md text-sm my-2 max-w-lg text-neutral-200">
         The unique body combined with the cute head increases human interest in
         interacting with ANTI
       </p>
@@ -69,9 +73,11 @@ const SkeletonThree = () => {
 const SkeletonFour = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-primary">Strong Frame</p>
+      <p className="font-bold md:text-4xl sm:text-3xl text-2xl text-primary">
+        Strong Frame
+      </p>
       <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+      <p className="font-normal md:text-lg sm:text-md text-sm my-2 max-w-lg text-neutral-200">
         The frame of the ANTI robot is designed to withstand the entire load
         placed on it
       </p>

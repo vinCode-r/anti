@@ -62,7 +62,7 @@ const Features = () => {
           className={`border-b md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all ${
             selected === "Automatic_Trash_Collection"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() =>
             handleClick("Automatic_Trash_Collection" as FeatureKey)
@@ -74,7 +74,7 @@ const Features = () => {
           className={`border-b md:text-md sm:text-sm text-xs leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all ${
             selected === "Smart_Trash_Identification"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() =>
             handleClick("Smart_Trash_Identification" as FeatureKey)
@@ -89,7 +89,7 @@ const Features = () => {
           className={`border-b xl:text-[1rem] md:text-md text-sm leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all lg:block hidden ${
             selected === "Automatic_Trash_Collection"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() =>
             handleClick("Automatic_Trash_Collection" as FeatureKey)
@@ -102,7 +102,7 @@ const Features = () => {
           className={`border-b xl:text-[1rem] md:text-md text-sm leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all ${
             selected === "AutoOpen"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() => handleClick("AutoOpen" as FeatureKey)}
         >
@@ -112,7 +112,7 @@ const Features = () => {
           className={`border-b xl:text-[1rem] md:text-md text-sm leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all ${
             selected === "AutoBack"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() => handleClick("AutoBack" as FeatureKey)}
         >
@@ -122,7 +122,7 @@ const Features = () => {
           className={`border-b xl:text-[1rem] md:text-md text-sm leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all ${
             selected === "Hello_ANTI"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() => handleClick("Hello_ANTI" as FeatureKey)}
         >
@@ -132,7 +132,7 @@ const Features = () => {
           className={`border-b xl:text-[1rem] md:text-md text-sm leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all ${
             selected === "Smart_Link"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() => handleClick("Smart_Link" as FeatureKey)}
         >
@@ -142,7 +142,7 @@ const Features = () => {
           className={`border-b xl:text-[1rem] md:text-md text-sm leading-[20px] sm:leading-[28px] sm:px-3 px-2 transition-all lg:block hidden ${
             selected === "Smart_Trash_Identification"
               ? "text-white border-white"
-              : "text-white/50 border-white/50"
+              : "text-white/25 border-white/25"
           }`}
           onClick={() =>
             handleClick("Smart_Trash_Identification" as FeatureKey)
@@ -152,7 +152,7 @@ const Features = () => {
         </button>
       </div>
 
-      <p className="text-white/65 md:text-2xl text-lg text-center max-w-[780px] mx-auto md:mt-20 mt-12 px-12">
+      <p className="text-white/65 md:text-2xl sm:text-lg text-md text-center max-w-[780px] mx-auto md:mt-20 mt-12 px-12">
         {TEXT.find((item) => Object.keys(item)[0] === selected)?.[selected] ||
           ""}
       </p>
