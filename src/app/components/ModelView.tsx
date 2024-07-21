@@ -55,7 +55,7 @@ const ModelView: React.FC = () => {
   };
 
   return (
-    <View className="w-full h-full absolute z-[10]">
+    <View className="w-full h-full absolute z-[1000]">
       <ambientLight intensity={0.3} />
       <PerspectiveCamera makeDefault position={[6, 2, 4]} />
       <Lights />
