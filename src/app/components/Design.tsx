@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GradientText from "./ui/GradientText";
 
 export default function Design() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function Design() {
         className="text-center text-white/85 md:text-5xl text-4xl font-bold"
         data-aos="fade-up"
       >
-        ANTI <span className="text-primary">Design</span>
+        ANTI <GradientText title="Design" />
       </h1>
       <div className="lg:h-[140] md:h-[100vh] h-[160vh] w-full">
         <LayoutGrid cards={cards} />

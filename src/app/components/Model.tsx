@@ -8,6 +8,7 @@ import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GradientText from "./ui/GradientText";
 
 const Model = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const Model = () => {
         className="text-white md:text-5xl text-4xl font-bold text-center mb-8 z-[100]"
         data-aos="fade-up"
       >
-        Take a <span className="text-primary">Deeper</span> Look
+        Take a <GradientText title="Deeper" /> Look
       </h1>
 
       <div className="md:w-5/6 w-full mx-auto md:h-[80vh] h-[61vh] rounded-2xl">

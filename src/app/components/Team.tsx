@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Profile from "./Profile";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GradientText from "./ui/GradientText";
 
 const Team = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const Team = () => {
         className="text-white/90 bg-clip-text md:text-5xl text-4xl font-bold text-center mb-20"
         data-aos="fade-up"
       >
-        Meet Our <span className="text-primary">Team</span>
+        Meet Our <GradientText title="Team" />
       </h1>
       <div>
         <Profile

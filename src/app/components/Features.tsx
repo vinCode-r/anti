@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import GradientText from "./ui/GradientText";
 
 const TEXT = [
   {
@@ -54,7 +55,7 @@ const Features = () => {
       data-aos="fade-up"
     >
       <h1 className="text-primary md:text-5xl text-4xl font-bold text-center mb-12 ">
-        Features
+        <GradientText title="Features" />
       </h1>
 
       <div className="lg:hidden flex justify-center items-center w-full mx-auto my-2">

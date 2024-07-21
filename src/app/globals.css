@@ -63,6 +63,12 @@ canvas {
   animation: animateText 3s linear infinite;
 }
 
+.gradient-text {
+  background: linear-gradient(to right, #33ced5, rgb(134 239 172));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .subtitle {
   background: linear-gradient(
     to right,

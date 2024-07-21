@@ -7,9 +7,9 @@ function Model(props) {
 
   const brightBlueMaterial = new THREE.MeshStandardMaterial({
     color: new THREE.Color(0x00bfff),
-    emissive: new THREE.Color(0x0080ff),
-    metalness: 0.5,
-    roughness: 0.2,
+    emissive: new THREE.Color(0x07f5d1),
+    metalness: 1,
+    roughness: 2,
   });
 
   return (
