@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/app/lib/utils";
-import Image from "next/image";
 
 type Card = {
   id: number;
@@ -60,7 +59,6 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 };
 
 const BlurImage = ({ card }: { card: Card }) => {
-  const [loaded, setLoaded] = useState(false);
   return (
     <img
       src={card.thumbnail}
@@ -81,7 +79,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           opacity: 0,
         }}
         animate={{
-          opacity: 0.6,
+          opacity: 0.5,
         }}
         className="absolute inset-0 h-full w-full bg-black opacity-20 z-10"
       />

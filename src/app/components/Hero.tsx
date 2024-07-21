@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const Hero = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1,
       once: true,
     });
   }, []);
@@ -21,7 +21,7 @@ const Hero = () => {
         Automated <br />
         Navigation & Trash Identification
       </h1>
-      <p className="text-xl font-semibold my-2 subtitle">
+      <p className="sm:text-xl text-lg font-semibold my-2 subtitle text-center">
         For Habits, Cleaner Environment
       </p>
       <div className="flex justify-center items-center md:space-x-8 space-x-4 my-7">
@@ -33,7 +33,7 @@ const Hero = () => {
         />
         <Button
           title="Features"
-          classname="scale-105"
+          classname="scale-105 sm:block hidden"
           onClick={() => {}}
           link="features"
         />

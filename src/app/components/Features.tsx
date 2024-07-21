@@ -34,7 +34,7 @@ type FeatureKey = keyof (typeof TEXT)[number];
 const Features = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 250,
       once: true,
     });
   }, []);

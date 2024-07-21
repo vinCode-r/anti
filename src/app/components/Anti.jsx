@@ -1,15 +1,24 @@
 import React from "react";
 import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 function Model(props) {
   const { nodes, materials } = useGLTF("/scene.glb");
+
+  const brightBlueMaterial = new THREE.MeshStandardMaterial({
+    color: new THREE.Color(0x00bfff),
+    emissive: new THREE.Color(0x0080ff),
+    metalness: 0.5,
+    roughness: 0.2,
+  });
+
   return (
     <group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Cylinder001.geometry}
-        material={materials.PaletteMaterial002}
+        material={brightBlueMaterial}
       />
       <mesh
         castShadow

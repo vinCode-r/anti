@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 const Model = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 250,
       once: true,
     });
   }, []);
