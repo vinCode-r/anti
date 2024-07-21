@@ -53,7 +53,7 @@ const Features = () => {
       id="features"
       data-aos="fade-up"
     >
-      <h1 className="text-transparent bg-gradient-to-r from-primary to-green-300 bg-clip-text md:text-5xl text-4xl font-bold text-center mb-12">
+      <h1 className="text-transparent bg-gradient-to-r from-primary to-green-300 bg-clip-text md:text-5xl text-4xl font-bold text-center mb-12 bg-transparent">
         Features
       </h1>
 

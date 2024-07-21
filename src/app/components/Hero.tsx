@@ -13,11 +13,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section
-      className="w-full h-full max-w-[88rem] flex flex-col justify-center items-center py-12 z-[100] min-h-screen"
-      data-aos="fade-up"
-    >
-      <h1 className="text-white/95 text-center md:text-4xl text-[2rem] font-bold my-3 md:leading-[44px] leading-[42px] title">
+    <section className="w-full h-full max-w-[88rem] flex flex-col justify-center items-center py-12 z-[100] min-h-screen">
+      <h1
+        className="text-white/95 text-center md:text-4xl text-[2rem] font-bold my-3 md:leading-[44px] leading-[42px] title"
+        data-aos="zoom-in"
+      >
         Automated <br />
         Navigation & Trash Identification
       </h1>
@@ -45,13 +45,9 @@ const Hero = () => {
         />
       </div>
       <div className="md:w-5/6 w-full md:px-12 px-8">
-        <div
-          className="hero w-full h-[56vh] rounded-xl p-2"
-          data-aos="zoom-in"
-          data-aos-delay="300"
-        >
+        <div className="hero w-full h-[56vh] rounded-xl p-2">
           <div className="w-full h-full bg-zinc-950 rounded-xl flex justify-center items-center">
-            <h1 className="text-transparent bg-zinc-600 bg-clip-text md:text-5xl text-3xl text-stroke text-center">
+            <h1 className="text-zinc-800  md:text-5xl text-3xl text-stroke text-center ">
               COMING SOON..
             </h1>
           </div>

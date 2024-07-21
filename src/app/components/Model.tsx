@@ -24,7 +24,7 @@ const Model = () => {
         data-aos="fade-up"
       >
         Take a{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">
+        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
           Deeper
         </span>{" "}
         Look

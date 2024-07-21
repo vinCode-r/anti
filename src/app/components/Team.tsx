@@ -22,11 +22,11 @@ const Team = () => {
         data-aos="fade-up"
       >
         Meet Our{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">
+        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
           Team
         </span>
       </h1>
-      <div data-aos="fade-up">
+      <div>
         <Profile
           image={MENTOR.image}
           name={MENTOR.name}
@@ -34,10 +34,7 @@ const Team = () => {
           link={MENTOR.link}
         />
       </div>
-      <div
-        className="grid lg:grid-cols-4 sm:grid-cols-2 mt-16 gap-y-12 md:gap-y-8 grid-cols-1"
-        data-aos="zoom-in-up"
-      >
+      <div className="grid lg:grid-cols-4 sm:grid-cols-2 mt-16 gap-y-12 md:gap-y-8 grid-cols-1">
         {TEAM.map((item) => (
           <Profile
             key={item.name}

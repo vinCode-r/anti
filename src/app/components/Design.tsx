@@ -13,14 +13,13 @@ export default function Design() {
   }, []);
 
   return (
-    <section
-      id="design"
-      className="w-full min-h-[80vh] z-[100]"
-      data-aos="fade-up"
-    >
-      <h1 className="text-center text-white/85 md:text-5xl text-4xl font-bold">
+    <section id="design" className="w-full min-h-[80vh] z-[100]">
+      <h1
+        className="text-center text-white/85 md:text-5xl text-4xl font-bold"
+        data-aos="fade-up"
+      >
         ANTI{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">
+        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
           Design
         </span>
       </h1>

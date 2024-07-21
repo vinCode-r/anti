@@ -24,7 +24,7 @@ const How = () => {
     >
       <h1 className="text-white md:text-5xl text-4xl font-bold text-center mb-4">
         About{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text">
+        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
           Prototype
         </span>
       </h1>
