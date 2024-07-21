@@ -18,10 +18,7 @@ export default function Design() {
         className="text-center text-white/85 md:text-5xl text-4xl font-bold"
         data-aos="fade-up"
       >
-        ANTI{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
-          Design
-        </span>
+        ANTI <span className="text-primary">Design</span>
       </h1>
       <div className="lg:h-[140] md:h-[100vh] h-[160vh] w-full">
         <LayoutGrid cards={cards} />
@@ -87,24 +84,24 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "md:col-span-2",
-    thumbnail: "/fullbody.jpg",
+    thumbnail: "/fullbody.webp",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
-    thumbnail: "/lengan.jpg",
+    thumbnail: "/lengan.webp",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail: "/body.jpg",
+    thumbnail: "/body.webp",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
-    thumbnail: "/rangka.jpg",
+    thumbnail: "/rangka.webp",
   },
 ];

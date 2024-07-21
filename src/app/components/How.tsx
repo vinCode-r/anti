@@ -23,10 +23,7 @@ const How = () => {
       data-aos="fade-up"
     >
       <h1 className="text-white md:text-5xl text-4xl font-bold text-center mb-4">
-        About{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
-          Prototype
-        </span>
+        About <span className="text-primary">Prototype</span>
       </h1>
       <div className="w-full flex justify-center my-8">
         <button className="flex items-center justify-center p-1 rounded-full bg-black/50 backdrop-blur ml-3 gap-1">

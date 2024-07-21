@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.2",
     "@react-three/drei": "^9.108.4",
     "@react-three/fiber": "^8.16.8",
     "aos": "^2.3.4",

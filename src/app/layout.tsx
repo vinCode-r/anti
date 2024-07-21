@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Partytown } from "@builder.io/partytown/react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Partytown debug={true} />
+      </head>
       <body className={montserrat.className}>{children}</body>
     </html>
   );

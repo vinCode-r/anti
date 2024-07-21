@@ -47,7 +47,7 @@ const Hero = () => {
       <div className="md:w-5/6 w-full md:px-12 px-8">
         <div className="hero w-full h-[56vh] rounded-xl p-2">
           <div className="w-full h-full bg-zinc-950 rounded-xl flex justify-center items-center">
-            <h1 className="text-zinc-800  md:text-5xl text-3xl text-stroke text-center ">
+            <h1 className="text-zinc-800 md:text-5xl text-3xl text-stroke text-center shadow-xl shadow-white/20 w-full px-8 rounded-full">
               COMING SOON..
             </h1>
           </div>

@@ -23,11 +23,7 @@ const Model = () => {
         className="text-white md:text-5xl text-4xl font-bold text-center mb-8"
         data-aos="fade-up"
       >
-        Take a{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
-          Deeper
-        </span>{" "}
-        Look
+        Take a <span className="text-primary">Deeper</span> Look
       </h1>
 
       <div className="md:w-5/6 w-full mx-auto md:h-[80vh] h-[61vh] rounded-2xl z-[11]">

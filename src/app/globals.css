@@ -80,11 +80,6 @@ canvas {
   animation-delay: 1.5s;
 }
 
-.text-stroke {
-  -webkit-text-stroke: 0.12px white;
-  text-stroke: 0.12px white;
-}
-
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;

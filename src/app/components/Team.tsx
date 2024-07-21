@@ -21,10 +21,7 @@ const Team = () => {
         className="text-white/90 bg-clip-text md:text-5xl text-4xl font-bold text-center mb-20"
         data-aos="fade-up"
       >
-        Meet Our{" "}
-        <span className="text-transparent bg-gradient-to-r from-primary to-green-200 bg-clip-text bg-transparent">
-          Team
-        </span>
+        Meet Our <span className="text-primary">Team</span>
       </h1>
       <div>
         <Profile
